@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-sltb-red: #D32F2F;
+  --color-sltb-yellow: #FFC107;
+  --color-pvt-blue: #0284C7;
+  --color-luxury-green: #0D9488;
+}
+
+/* --- Clean Minimalism Theme Base --- */
+body {
+  font-family: var(--font-sans);
+  background-color: #F8FAFC !important; /* Elegant Light Slate-50 background */
+  color: #0F172A !important; /* Premium high-contrast Slate-900 text */
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* --- Deep Overrides to enforce Light Mode Clean Minimalism --- */
+#ceylon-transit-app {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+/* Elegant Headers & Navigation Bar */
+#ceylon-transit-app header {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+#ceylon-transit-app header h1 {
+  color: #0F172A !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+#ceylon-transit-app header span[class*="text-slate-50"] {
+  color: #334155 !important;
+}
+
+#ceylon-transit-app header p {
+  color: #64748B !important;
+}
+
+/* Logo Block - Style like a high-contrast transit badge */
+#ceylon-transit-app header div[class*="from-rose-500"] {
+  background: #2563EB !important; /* Brand Blue */
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Live Clock & Radio Indicators */
+#ceylon-transit-app header div[class*="bg-slate-900"] {
+  background-color: #F1F5F9 !important;
+  border-color: #E2E8F0 !important;
+}
+
+#ceylon-transit-app header div[class*="text-rose-300"] {
+  color: #E11D48 !important;
+}
+
+#ceylon-transit-app header p[class*="text-rose-300"] {
+  color: #64748B !important;
+}
+
+#ceylon-transit-app header div[class*="text-amber-400"] {
+  color: #D97706 !important;
+}
+
+/* Tab Selector Control Bar */
+#ceylon-transit-app div[class*="bg-slate-900 p-1.5"] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Active tab buttons */
+#ceylon-transit-app button[class*="bg-gradient-to-br from-indigo-600 to-indigo-700"] {
+  background: #2563EB !important; /* Solid blue active status */
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Inactive tabs */
+#ceylon-transit-app button[class*="text-slate-400"] {
+  color: #64748B !important;
+}
+
+#ceylon-transit-app button[class*="text-slate-400"]:hover {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+}
+
+/* Glass Panels and Widgets (Turned into pristine white containers) */
+.glass-panel {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 20px !important;
+}
+
+.glass-panel:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.03) !important;
+}
+
+/* Heading/Subheading levels within slate-50 canvas */
+h1, h2, h3, h4, h5, h6 {
+  color: #0F172A !important;
+}
+
+p, span {
+  color: inherit;
+}
+
+/* Text gray modifiers */
+#ceylon-transit-app span[class*="text-slate-400"],
+#ceylon-transit-app div[class*="text-slate-400"],
+#ceylon-transit-app p[class*="text-slate-400"] {
+  color: #64748B !important;
+}
+
+#ceylon-transit-app span[class*="text-slate-500"],
+#ceylon-transit-app div[class*="text-slate-500"],
+#ceylon-transit-app p[class*="text-slate-500"] {
+  color: #475569 !important;
+}
+
+#ceylon-transit-app span[class*="text-slate-300"],
+#ceylon-transit-app div[class*="text-slate-300"],
+#ceylon-transit-app p[class*="text-slate-300"] {
+  color: #334155 !important;
+}
+
+/* --- Control Buttons --- */
+#ceylon-transit-app button[class*="bg-indigo-600"] {
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+}
+
+#ceylon-transit-app button[class*="bg-rose-600"] {
+  background-color: #EF4444 !important;
+  color: #FFFFFF !important;
+}
+
+/* --- Traffic Flow Buttons --- */
+#ceylon-transit-app button[class*="bg-slate-900/50"] {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #475569 !important;
+}
+
+#ceylon-transit-app button[class*="bg-slate-900/50"]:hover {
+  border-color: #CBD5E1 !important;
+  background-color: #F1F5F9 !important;
+}
+
+#ceylon-transit-app button[class*="bg-indigo-600/10"] {
+  background-color: #EFF6FF !important;
+  border-color: #3B82F6 !important;
+  color: #1D4ED8 !important;
+}
+
+/* Stats Widgets Icons background */
+#ceylon-transit-app div[class*="bg-indigo-500/10"] {
+  background-color: #EFF6FF !important;
+  color: #2563EB !important;
+}
+#ceylon-transit-app div[class*="bg-emerald-500/10"] {
+  background-color: #ECFDF5 !important;
+  color: #059669 !important;
+}
+#ceylon-transit-app div[class*="bg-amber-500/10"] {
+  background-color: #FFFBEB !important;
+  color: #D97706 !important;
+}
+#ceylon-transit-app div[class*="bg-rose-500/10"] {
+  background-color: #FFF1F2 !important;
+  color: #E11D48 !important;
+}
+
+/* --- Vector SVG Schematic Map Overrides --- */
+#ceylon-transit-app div[class*="bg-[#04060C]"] {
+  background-color: #FFFFFF !important; /* Pure white crisp map background */
+  border: 1px solid #E2E8F0 !important;
+}
+
+.grid-overlay {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+}
+
+/* Map overlay text */
+#ceylon-transit-app text[class*="fill-slate-700"] {
+  fill: #64748B !important;
+}
+
+#ceylon-transit-app g[class*="fill-slate-500"] text {
+  fill: #94A3B8 !important;
+}
+
+/* Floating overlay panels on map */
+#ceylon-transit-app div[class*="bg-slate-950/80"] {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+  border-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+/* Map Info Legend Drawer */
+#ceylon-transit-app div[class*="bg-slate-950/80 border-slate-850"] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+/* --- Radio Logs / List items / Forms --- */
+#ceylon-transit-app div[class*="bg-slate-900/60"] {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+/* Planner Forms, Inputs, Dropdowns */
+#ceylon-transit-app select,
+#ceylon-transit-app input {
+  background-color: #FFFFFF !important;
+  border: 1px solid #D1D5DB !important;
+  color: #0F172A !important;
+}
+
+#ceylon-transit-app select:focus,
+#ceylon-transit-app input:focus {
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Calculated Results Block */
+#ceylon-transit-app div[class*="bg-slate-900/40"] {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+#ceylon-transit-app div[class*="bg-slate-950/50"] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Custom Table / Timetable Rows */
+#ceylon-transit-app table {
+  color: #0F172A !important;
+}
+
+#ceylon-transit-app thead {
+  background-color: #F1F5F9 !important;
+  color: #475569 !important;
+}
+
+#ceylon-transit-app th {
+  border-bottom: 2px solid #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+#ceylon-transit-app tr {
+  border-bottom: 1px solid #F1F5F9 !important;
+}
+
+#ceylon-transit-app tr:hover {
+  background-color: #F8FAFC !important;
+}
+
+#ceylon-transit-app td {
+  color: #334155 !important;
+}
+
+/* Fleet Register item elements */
+#ceylon-transit-app div[class*="border-slate-800"] {
+  border-color: #E2E8F0 !important;
+}
+
+#ceylon-transit-app div[class*="bg-slate-950"] {
+  background-color: #FFFFFF !important;
+}
+
+/* Conductor Shouts / Speak Bubbles bubble pointer */
+polygon[fill="#F43F5E"] {
+  fill: #EF4444 !important;
+}
+
+/* Progress bars */
+#ceylon-transit-app div[class*="bg-slate-800"] {
+  background-color: #E2E8F0 !important;
+}
+
+/* Micro-animations */
+@keyframes pulse-sltb {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.pulse-red {
+  animation: pulse-sltb 2s infinite ease-in-out;
+}
+
+@keyframes map-flow {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-flow {
+  stroke-dasharray: 8, 4;
+  animation: map-flow 1.2s linear infinite;
+}

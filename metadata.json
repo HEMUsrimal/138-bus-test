@@ -1,0 +1,6 @@
+{
+  "name": "Colombo Route 138 Bus Tracker",
+  "description": "Smart Bus Tracking and Passenger Information System tailored for Sri Lanka, featuring Route 138 (Maharagama to Pettah/Fort), SLTB Red Buses, private A/C coaches, fare calculation, live vector maps, and Colombo traffic simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
